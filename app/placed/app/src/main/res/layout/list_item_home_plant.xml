@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_litem_home_plant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Pflanzen Name"
+        android:textAppearance="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pib_litem_homee_plant"
+        app:layout_constraintStart_toEndOf="@+id/iv_litem_home_plant_icon"
+        app:layout_constraintTop_toTopOf="@+id/pib_litem_homee_plant"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/tv_litem_home_plant_biologicalname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="biological name"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_litem_home_plant_icon"
+        app:layout_constraintTop_toBottomOf="@+id/div_litem_home_plant_namediv" />
+
+    <TextView
+        android:id="@+id/tv_litem_home_plant_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="16:24"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_litem_home_plant_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_litem_home_plant_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_litem_home_plant_name"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_litem_home_sensor_plantid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_litem_home_plant_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/pib_litem_homee_plant"
+        app:layout_constraintEnd_toEndOf="@id/pib_litem_homee_plant"
+        app:layout_constraintStart_toStartOf="@id/pib_litem_homee_plant"
+        app:layout_constraintTop_toTopOf="@id/pib_litem_homee_plant"
+        app:srcCompat="@drawable/icon_plant_1" />
+
+    <View
+        android:id="@+id/div_litem_home_plant_namediv"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="-8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@+id/tv_litem_home_plant_name"
+        app:layout_constraintStart_toStartOf="@id/tv_litem_home_plant_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_litem_home_plant_name" />
+
+    <com.duedderuesch.placed.utils.views.PlantIconBorder
+        android:id="@+id/pib_litem_homee_plant"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

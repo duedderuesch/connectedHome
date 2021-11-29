@@ -1,0 +1,26 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Cloud Messages"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="pref_sw_cm"
+            android:summaryOff="keine Nachrichten erhalten"
+            android:summaryOn="Nachrichten erhalten"
+            android:title="Cloud Messages erhalten"
+            app:iconSpaceReserved="false"/>
+            <SwitchPreference
+                android:defaultValue="true"
+                android:dependency="pref_sw_cm"
+                android:key="pref_sw_cm_plant"
+                android:summaryOn="Nachrichten erhalten"
+                android:title="Plant Messages" />
+            <SwitchPreference
+                android:defaultValue="true"
+                android:dependency="pref_sw_cm"
+                android:key="pref_sw_cm_home"
+                android:summaryOn="Nachrichten erhalten"
+                android:title="Home Messages" />
+    </PreferenceCategory>
+</PreferenceScreen>

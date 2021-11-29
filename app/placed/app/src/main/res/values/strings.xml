@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">placed</string>
+    <string name="title_home">Home</string>
+    <string name="title_feed">Feed</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="web_client_id">832245246924-5ldklvap0onsn84jtieu7c7kjpls2ff0.apps.googleusercontent.com</string>
+    <string name="title_activity_home_add">Add a Home</string>
+
+    <!--    Strings for Notifications-->
+    <string name="noti_channel_name_plant">Plant Notifications</string>
+    <string name="noti_channel_name_home">Home Notifications</string>
+    <string name="noti_channel_name_pollen">Pollen Notifications</string>
+    <string name="noti_channel_desc_plant">All Notifications around plants.</string>
+    <string name="noti_channel_desc_home">All Notifications around home.</string>
+    <string name="noti_channel_desc_pollen">All Notifications around pollen.</string>
+    <string name="noti_channel_id_plant">NotiPlant</string>
+    <string name="noti_channel_id_home">NotiHome</string>
+    <string name="noti_channel_id_pollen">NotiPollen</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="title_activity_plant">PlantActivity</string>
+    <string name="title_activity_sensor">SensorActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <string name="map_id">87df2c780b716bb6</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+    <string name="server_header">Server</string>
+    <string name="data_header">Data</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_pollen">Pollen</string>
+
+</resources>

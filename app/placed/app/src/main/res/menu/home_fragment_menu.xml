@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuitem_home_addhome"
+        android:icon="@drawable/ic_add_black_24"
+        android:title="Home hinzufügen" />
+    <item
+        android:id="@+id/menuitem_home_plant"
+        android:icon="@drawable/ic_add_black_24"
+        android:title="Plant" />
+</menu>

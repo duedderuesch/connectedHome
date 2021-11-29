@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SevenDayChart">
+        <attr name="dataInPercent" format="boolean"/>
+        <attr name="yMin" format="integer"/>
+        <attr name="yMax" format="integer"/>
+        <attr name="showYLegend" format="boolean" />
+        <attr name="showXLegend" format="boolean" />
+        <attr name="yLegendColor" format="color" />
+        <attr name="showDataMarker" format="boolean"/>
+        <attr name="useColoredMarker" format="boolean"/>
+        <attr name="showDataLegend" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="PlantIconBorder">
+        <attr name="radius" format="integer"/>
+    </declare-styleable>
+</resources>

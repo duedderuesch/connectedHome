@@ -1,0 +1,26 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:fragment="com.duedderuesch.placed.ui.SettingsActivity$ServerFragment"
+        app:icon="@drawable/ic_sync"
+        app:key="server_header"
+        app:title="@string/server_header" />
+    <Preference
+        app:fragment="com.duedderuesch.placed.ui.SettingsActivity$DataFragment"
+        app:icon="@drawable/ic_settings_data"
+        app:key="data_header"
+        app:title="@string/data_header" />
+    <Preference
+        app:fragment="com.duedderuesch.placed.ui.SettingsActivity$MessagesFragment"
+        app:icon="@drawable/messages"
+        app:key="messages_header"
+        app:title="@string/messages_header" />
+
+    <Preference
+        app:fragment="com.duedderuesch.placed.ui.SettingsActivity$SyncFragment"
+        app:icon="@drawable/ic_sync"
+        app:key="sync_header"
+        app:title="@string/sync_header" />
+
+
+</PreferenceScreen>

@@ -1,0 +1,7 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="sw_data_stopDataLocalServer"
+        android:title="Stop loading data from local server, when not in same network" />
+</PreferenceScreen>

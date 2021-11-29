@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SQLAndroidSettings">
+    <option name="databases">
+      <map>
+        <entry key="placed_C:\Users\duedd\Documents\GitHub\placed\app\placed_0.35\AndroidSqlEditorDatabases\">
+          <value>
+            <list>
+              <option value="RF8R80B016H" />
+              <option value="/databases/placed.db" />
+              <option value="placed" />
+              <option value="placed" />
+              <option value="false" />
+              <option value="com.duedderuesch.placed" />
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="storageVersion" value="2" />
+  </component>
+</project>

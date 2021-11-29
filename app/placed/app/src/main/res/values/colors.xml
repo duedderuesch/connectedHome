@@ -1,0 +1,43 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+  <color name="primaryColor">#a5d6a7</color>
+  <color name="primaryColorLight">#d7ffd9</color>
+  <color name="primaryColorDark">#75a478</color>
+  <color name="primaryColorDarkModeDark">#495E4A</color>
+  <color name="secondaryColor">#ffab91</color>
+  <color name="secondaryColorLight">#ffddc1</color>
+  <color name="secondaryColorDark">#c97b63</color>
+  <color name="primaryTextColor">#000000</color>
+  <color name="primaryTextColorDarkMode">#DFDFDF</color>
+  <color name="secondaryTextColor">#ffffff</color>
+
+  <color name="secondaryBackground">#2675A478</color>
+  <color name="backgroundDarkMode">#121212</color>
+  <color name="secondaryBackgroundDarkMode">#3A3A3A</color>
+
+  <color name="descriptiveTextColor">#6D6D6D</color>
+  <color name="descriptiveTextColorDarkMode">#A1A1A1</color>
+
+  <color name="placedDarkBlueColor">#38A4D0</color>
+  <color name="placedLightBlueColor">#B4DCEA</color>
+  <color name="placedIntenseRedColor">#EF4F63</color>
+
+  <color name="black">#000000</color>
+  <color name="white">#ffffff</color>
+
+  <color name="sdcDaySeperatorTint">#494949</color>
+  <color name="sdcShadow">#6A6A6A</color>
+
+  <color name="progressBarBackgroundTint">#395E5E5E</color>
+  <color name="progressBarMaxColor">#3BEF4F63</color>
+
+  <color name="state100">#75a478</color>
+  <color name="state80">#394C3B</color>
+  <color name="state50">#C38120</color>
+  <color name="state20">#c97b63</color>
+  <color name="state0">#EF4F63</color>
+
+  <color name="headerBackground">#65A5D6A7</color>
+  <color name="headerBackgroundDarkMode">#495E4A</color>
+
+</resources>

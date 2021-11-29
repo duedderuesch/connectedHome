@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ap="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <Spinner
+        android:id="@+id/sp_graph_choosesensor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_graph_trange"
+        app:layout_constraintEnd_toStartOf="@+id/bt_graph_trange"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bt_graph_trange" />
+
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/plot"
+        style="@style/GraphSensorData"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        ap:domainTitle="domain"
+        ap:lineLabelRotationBottom="-45"
+        ap:lineLabels="bottom|bottom"
+        ap:rangeTitle="range"
+        ap:title="A Simple XY Plot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_graph_time_right" />
+
+    <ImageButton
+        android:id="@+id/bt_graph_trange"
+        style="@style/TextAppearance.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_time" />
+
+    <ImageButton
+        android:id="@+id/bt_graph_time_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:srcCompat="@drawable/ic_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_graph_trange" />
+
+    <TextView
+        android:id="@+id/tv_graph_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_graph_time_right"
+        app:layout_constraintEnd_toStartOf="@+id/bt_graph_time_right"
+        app:layout_constraintStart_toEndOf="@+id/bt_graph_time_left"
+        app:layout_constraintTop_toTopOf="@+id/bt_graph_time_right" />
+
+    <ImageButton
+        android:id="@+id/bt_graph_time_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_graph_time_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bt_graph_time_right"
+        app:srcCompat="@drawable/ic_left" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

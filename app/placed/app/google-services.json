@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "832245246924",
+    "project_id": "placed-5b875",
+    "storage_bucket": "placed-5b875.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832245246924:android:a56fb103f1f09977f18b69",
+        "android_client_info": {
+          "package_name": "com.duedderuesch.placed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "832245246924-5ldklvap0onsn84jtieu7c7kjpls2ff0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmpiEkuiLyDsjWVrxYX0I-VdoZUmXbHjE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "832245246924-5ldklvap0onsn84jtieu7c7kjpls2ff0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

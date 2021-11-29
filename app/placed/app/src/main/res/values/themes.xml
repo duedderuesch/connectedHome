@@ -1,0 +1,115 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Placed" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColorDark</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryColorLight</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+    <style name="Theme.Placed.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Placed.DescText" parent="@style/TextAppearance.AppCompat.Small">
+        <item name="fontFamily">"@font/roboto_medium"</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="Theme.Placed.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Placed.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.Placed.DescText.Edit" parent="@style/Theme.Placed.DescText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Theme.Placed.EditTextView">
+        <item name="fontFamily">"@font/roboto_light"</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Theme.Placed.AlertProgressNotification">
+        <item name="android:progressTint">@color/placedIntenseRedColor</item>
+    </style>
+
+    <style name="Theme.Placed.Title" parent="TextAppearance.AppCompat.Display1">
+    </style>
+
+    <style name="Theme.Placed.Header">
+        <item name="android:background">@color/primaryColor</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+
+    <style name="GraphSensorData">
+        <item name="titleTextSize">20sp</item>
+        <item name="rangeTitleTextSize">13sp</item>
+        <item name="domainTitleTextSize">13sp</item>
+        <item name="graphMarginTop">20dp</item>
+        <item name="graphMarginBottom">40dp</item>
+        <item name="graphMarginLeft">16dp</item>
+        <item name="graphMarginRight">4dp</item>
+        <item name="domainLineThickness">0dp</item>
+        <item name="rangeLineThickness">0dp</item>
+        <item name="domainOriginLineThickness">0dp</item>
+        <item name="rangeOriginLineThickness">0dp</item>
+        <item name="legendTextSize">15sp</item>
+        <item name="legendIconHeight">15dp</item>
+        <item name="legendIconWidth">15dp</item>
+        <item name="legendHeight">25dp</item>
+        <item name="legendAnchor">right_bottom</item>
+        <item name="borderColor">@color/ap_transparent</item>
+        <item name="gridInsetTop">1dp</item>
+        <item name="gridInsetBottom">20dp</item>
+        <item name="gridInsetLeft">25dp</item>
+        <item name="gridInsetRight">1dp</item>
+        <item name="lineLabels">left|bottom</item>
+        <item name="lineLabelInsetTop">1dp</item>
+        <item name="lineLabelInsetBottom">10dp</item>
+        <item name="lineLabelInsetLeft">20dp</item>
+        <item name="lineLabelInsetRight">1dp</item>
+        <item name="lineLabelTextSizeTop">15sp</item>
+        <item name="lineLabelTextSizeBottom">15sp</item>
+        <item name="lineLabelTextSizeLeft">15sp</item>
+        <item name="lineLabelTextSizeRight">15sp</item>
+        <item name="lineLabelAlignLeft">right</item>
+        <item name="lineLabelAlignRight">left</item>
+        <item name="lineLabelAlignTop">left</item>
+        <item name="lineLabelAlignBottom">right</item>
+        <item name="lineLabelRotationBottom">-45</item>
+        <item name="lineLabelRotationTop">-45</item>
+        <item name="lineExtensionLeft">2dp</item>
+        <item name="lineExtensionBottom">2dp</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="backgroundColor">#FFFFFF</item>
+        <item name="graphBackgroundColor">#FFFFFF</item>
+        <item name="gridBackgroundColor">@color/ap_white</item>
+        <item name="domainLineColor">@color/ap_transparent</item>
+        <item name="rangeLineColor">@color/ap_transparent</item>
+        <item name="lineLabelTextColorTop">@color/ap_charcoal</item>
+        <item name="lineLabelTextColorBottom">@color/ap_charcoal</item>
+        <item name="lineLabelTextColorLeft">@color/ap_charcoal</item>
+        <item name="lineLabelTextColorRight">@color/ap_charcoal</item>
+        <item name="domainOriginLineColor">@color/ap_charcoal</item>
+        <item name="rangeOriginLineColor">@color/ap_charcoal</item>
+        <item name="titleTextColor">@color/ap_charcoal</item>
+        <item name="domainTitleTextColor">@color/ap_charcoal</item>
+        <item name="rangeTitleTextColor">@color/ap_charcoal</item>
+        <item name="legendTextColor">@color/ap_charcoal</item>
+        <item name="legendVisible">false</item>
+    </style>
+</resources>

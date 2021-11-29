@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="true"
+    tools:context=".ui.edit.EditPlantActivity">
+
+    <EditText
+        android:id="@+id/et_edplant_plant_name"
+        style="@android:style/Widget.AutoCompleteTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textCapWords"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="Goldfruchtpalme"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_edplant_icname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_edplant_icname"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_edplant_plant_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_cloud_done" />
+
+    <View
+        android:id="@+id/div_edplant_top"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_edplant_plant_name" />
+
+    <ProgressBar
+        android:id="@+id/pb_edplant_loading"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/primaryColorDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/div_edplant_top" />
+
+    <TextView
+        android:id="@+id/tv_edplant_servererror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Server Not Reachable!!!"
+        android:textColor="@color/placedIntenseRedColor"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_edplant_loading" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_edplant_planttype_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_edplant_servererror">
+
+        <TextView
+            android:id="@+id/tv_edplant_header_planttype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Plant type"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_edplant_arrow_planttype"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:rotation="-90"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_left" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_edplant_planttype_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_edplant_planttype_header">
+
+        <TextView
+            android:id="@+id/tv_edplant_desc_planttype_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="plant-type name:"
+            android:textAppearance="@style/Theme.Placed.DescText.Edit"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_edplant_planttype_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_edplant_planttype_name" />
+
+        <AutoCompleteTextView
+            android:id="@+id/et_edplant_planttype_name"
+            style="@style/Theme.Placed.EditTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="textAutoComplete"
+            android:singleLine="true"
+            android:text="Goldfruchtpalme"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_edplant_planttype_icname"
+            app:layout_constraintStart_toEndOf="@+id/tv_edplant_desc_planttype_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_edplant_planttype_icname"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_edplant_desc_planttype_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_edplant_desc_planttype_name"
+            app:srcCompat="@drawable/ic_cloud_done" />
+
+        <TextView
+            android:id="@+id/tv_edplant_planttype_desc_maxtemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="max temp."
+            app:layout_constraintEnd_toStartOf="@+id/tv_edplant_planttype_desc_maxhum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_edplant_planttype_name" />
+
+        <TextView
+            android:id="@+id/tv_edplant_planttype_desc_maxtemp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="min temp."
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/tv_edplant_planttype_desc_maxtemp"
+            app:layout_constraintStart_toStartOf="@+id/tv_edplant_planttype_desc_maxtemp"
+            app:layout_constraintTop_toBottomOf="@+id/et_edplant_planttype_mintemp" />
+
+        <TextView
+            android:id="@+id/tv_edplant_planttype_desc_maxhum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="max hum."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_edplant_planttype_desc_maxtemp"
+            app:layout_constraintTop_toBottomOf="@+id/et_edplant_planttype_name" />
+
+        <TextView
+            android:id="@+id/tv_edplant_planttype_desc_maxhum2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="min hum."
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/tv_edplant_planttype_desc_maxhum"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_edplant_planttype_desc_maxhum"
+            app:layout_constraintTop_toBottomOf="@+id/et_edplant_planttype_minhum" />
+
+        <EditText
+            android:id="@+id/et_edplant_planttype_maxtemp"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="35"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/tv_edplant_planttype_desc_maxtemp"
+            app:layout_constraintStart_toStartOf="@+id/tv_edplant_planttype_desc_maxtemp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_edplant_planttype_desc_maxtemp" />
+
+        <EditText
+            android:id="@+id/et_edplant_planttype_maxhum"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="85"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/tv_edplant_planttype_desc_maxhum"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_edplant_planttype_desc_maxhum"
+            app:layout_constraintTop_toBottomOf="@+id/tv_edplant_planttype_desc_maxhum" />
+
+        <ImageView
+            android:id="@+id/iv_edplant_planttype_ictemp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_edplant_planttype_desc_maxtemp"
+            app:layout_constraintStart_toStartOf="@+id/tv_edplant_planttype_desc_maxtemp"
+            app:layout_constraintTop_toBottomOf="@+id/et_edplant_planttype_maxtemp"
+            app:srcCompat="@drawable/ic_thermostate" />
+
+        <ImageView
+            android:id="@+id/iv_edplant_planttype_ictemp2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_edplant_planttype_desc_maxhum"
+            app:layout_constraintStart_toStartOf="@+id/tv_edplant_planttype_desc_maxhum"
+            app:layout_constraintTop_toBottomOf="@+id/et_edplant_planttype_maxhum"
+            app:srcCompat="@drawable/ic_water" />
+
+        <EditText
+            android:id="@+id/et_edplant_planttype_mintemp"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="16"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/tv_edplant_planttype_desc_maxtemp"
+            app:layout_constraintStart_toStartOf="@+id/tv_edplant_planttype_desc_maxtemp"
+            app:layout_constraintTop_toBottomOf="@+id/iv_edplant_planttype_ictemp" />
+
+        <EditText
+            android:id="@+id/et_edplant_planttype_minhum"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="25"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/tv_edplant_planttype_desc_maxhum"
+            app:layout_constraintStart_toStartOf="@+id/tv_edplant_planttype_desc_maxhum"
+            app:layout_constraintTop_toBottomOf="@+id/iv_edplant_planttype_ictemp2" />
+
+        <View
+            android:id="@+id/div_edplant_planttype_divnumbers"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_edplant_planttype_desc_maxtemp2"
+            app:layout_constraintEnd_toStartOf="@+id/tv_edplant_planttype_desc_maxhum"
+            app:layout_constraintStart_toEndOf="@+id/tv_edplant_planttype_desc_maxtemp"
+            app:layout_constraintTop_toTopOf="@+id/tv_edplant_planttype_desc_maxtemp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/div_edplant_bottom"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_edplant_planttype_content" />
+
+    <TextView
+        android:id="@+id/tv_edplant_header_el"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Plant element"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/div_edplant_bottom" />
+
+    <ImageView
+        android:id="@+id/iv_edplant_icplant"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_edplant_header_el"
+        app:srcCompat="@drawable/icon_plant_1" />
+
+    <TextView
+        android:id="@+id/tv_edplant_desc_alivesince"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="alive since:"
+        android:textAppearance="@style/Theme.Placed.DescText.Edit"
+        app:layout_constraintBottom_toBottomOf="@+id/et_edplant_plant_alivesince"
+        app:layout_constraintStart_toEndOf="@+id/iv_edplant_icplant"
+        app:layout_constraintTop_toTopOf="@+id/et_edplant_plant_alivesince" />
+
+    <EditText
+        android:id="@+id/et_edplant_plant_alivesince"
+        style="@style/Theme.Placed.EditTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toStartOf="@+id/iv_edplant_icalivesince"
+        app:layout_constraintStart_toEndOf="@+id/tv_edplant_desc_alivesince"
+        app:layout_constraintTop_toTopOf="@+id/iv_edplant_icplant" />
+
+    <ImageView
+        android:id="@+id/iv_edplant_icalivesince"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_edplant_desc_alivesince"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_edplant_desc_alivesince"
+        app:srcCompat="@drawable/ic_cloud_done" />
+
+    <TextView
+        android:id="@+id/tv_edplant_desc_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="note:"
+        android:textAppearance="@style/Theme.Placed.DescText.Edit"
+        app:layout_constraintBottom_toBottomOf="@+id/et_edplant_plant_note"
+        app:layout_constraintStart_toEndOf="@+id/iv_edplant_icplant"
+        app:layout_constraintTop_toTopOf="@+id/et_edplant_plant_note" />
+
+    <EditText
+        android:id="@+id/et_edplant_plant_note"
+        style="@style/Theme.Placed.EditTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toStartOf="@+id/iv_edplant_icnote"
+        app:layout_constraintStart_toEndOf="@+id/tv_edplant_desc_note"
+        app:layout_constraintTop_toBottomOf="@+id/et_edplant_plant_alivesince" />
+
+    <ImageView
+        android:id="@+id/iv_edplant_icnote"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_edplant_desc_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_edplant_desc_note"
+        app:srcCompat="@drawable/ic_cloud_done" />
+
+    <TextView
+        android:id="@+id/tv_edplant_desc_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="id:"
+        android:textAppearance="@style/Theme.Placed.DescText.Edit"
+        app:layout_constraintBottom_toBottomOf="@+id/et_edplant_plant_id"
+        app:layout_constraintStart_toEndOf="@+id/iv_edplant_icplant"
+        app:layout_constraintTop_toBottomOf="@+id/et_edplant_plant_note" />
+
+    <TextView
+        android:id="@+id/tv_edplant_desc_swsavetofb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="save changes in FB-Cloud"
+        android:textAppearance="@style/Theme.Placed.DescText.Edit"
+        app:layout_constraintBottom_toBottomOf="@+id/sw_edplant_savetofb"
+        app:layout_constraintEnd_toStartOf="@+id/sw_edplant_savetofb"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_edplant_icplant"
+        app:layout_constraintTop_toBottomOf="@+id/et_edplant_plant_id" />
+
+    <EditText
+        android:id="@+id/et_edplant_plant_id"
+        style="@style/Theme.Placed.EditTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toStartOf="@+id/iv_edplant_icid"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_edplant_desc_id"
+        app:layout_constraintTop_toBottomOf="@+id/et_edplant_plant_note" />
+
+    <ImageView
+        android:id="@+id/iv_edplant_icid"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_edplant_desc_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_edplant_desc_id"
+        app:srcCompat="@drawable/ic_cloud_done" />
+
+    <Switch
+        android:id="@+id/sw_edplant_savetofb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:showText="false"
+        app:layout_constraintEnd_toEndOf="@+id/et_edplant_plant_id"
+        app:layout_constraintTop_toBottomOf="@+id/et_edplant_plant_id"
+        tools:checked="false" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

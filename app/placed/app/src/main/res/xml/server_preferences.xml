@@ -1,0 +1,21 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditTextPreference
+        android:defaultValue="xxx.xxx.xxx.xxx"
+        android:icon="@drawable/ic_server_ip"
+        android:key="et_pref_server_localip"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="xxx.xxx.xxx.xxx"
+        android:title="Local Server IP Adresse" />
+    <EditTextPreference
+        android:defaultValue="false"
+        android:icon="@drawable/ic_cloud"
+        android:key="et_pref_server_fbdbadress"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="https://projectname-default-rtdb.europe-west1.firebasedatabase.app/"
+        android:title="Firebase Database Address" />
+
+</PreferenceScreen>
